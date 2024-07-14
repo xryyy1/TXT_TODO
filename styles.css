@@ -1,14 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background-image: url('bg1.png');
+    background-size: cover;
+    background-position: center;
 }
-
-h1 {
-    margin: 20px 0;
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
 }
-
+.icon {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.content {
+    display: none;
+    margin-top: 50px;
+}
+.content.active {
+    display: block;
+}
 #chart {
-    margin: 0 auto;
+    width: 600px;
+    height: 400px;
 }
