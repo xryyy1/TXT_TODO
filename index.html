@@ -25,23 +25,40 @@
             margin: 10px;
         }
         .icon-container img {
-            width: 100px;
-            height: 100px;
+            width: 300px;  /* 设置图标宽度为原来的三倍 */
+            height: 300px; /* 设置图标高度为原来的三倍 */
             cursor: pointer;
+        }
+        .icon-row-1 {
+            margin-top: 290px; /* 将第一排图标下移 */
+        }
+        .icon-row-2 {
+            margin-top: -100px; /* 将第一排图标下移 */
+            transform: translateX(-150px); /* 将第二排图标左移 */
+        }
+        .icon-row-3 {
+            margin-top: -100px; /* 将第一排图标下移 */
+            transform: translateX(150px); /* 将第三排图标右移 */
         }
     </style>
 </head>
 <body>
     <div class="icon-container">
-        <a href="111.html"><img src="icon 1.png" alt="Icon 1"></a>
-        <a href="222.html"><img src="icon 2.png" alt="Icon 2"></a>
-        <a href="333.html"><img src="icon 3.png" alt="Icon 3"></a>
-        <a href="444.html"><img src="icon 4.png" alt="Icon 4"></a>
-        <a href="555.html"><img src="icon 5.png" alt="Icon 5"></a>
-        <a href="666.html"><img src="icon 6.png" alt="Icon 6"></a>
-        <a href="777.html"><img src="icon 7.png" alt="Icon 7"></a>
-        <a href="888.html"><img src="icon 8.png" alt="Icon 8"></a>
-        <a href="index2.html"><img src="icon 9.png" alt="Icon 9"></a>
+        <div class="icon-row-1">
+            <a href="111.html"><img src="icon 1.png" alt="Icon 1"></a>
+            <a href="222.html"><img src="icon 2.png" alt="Icon 2"></a>
+            <a href="333.html"><img src="icon 3.png" alt="Icon 3"></a>
+            <a href="444.html"><img src="icon 4.png" alt="Icon 4"></a>
+            <a href="555.html"><img src="icon 5.png" alt="Icon 5"></a>
+        </div>
+        <div class="icon-row-2">
+            <a href="666.html"><img src="icon 6.png" alt="Icon 6"></a>
+            <a href="777.html"><img src="icon 7.png" alt="Icon 7"></a>
+        </div>
+        <div class="icon-row-3">
+            <a href="888.html"><img src="icon 8.png" alt="Icon 8"></a>
+            <a href="index2.html"><img src="icon 9.png" alt="Icon 9"></a>
+        </div>
     </div>
 </body>
 </html>
