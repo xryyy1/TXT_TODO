@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilibili Video Data Visualization</title>
+    <title>TXT 2024年所有todo节目的数据可视化（截止2024.7.14）</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bilibili Video Data Visualization</h1>
-    <div id="chart" style="width: 800px; height: 600px;"></div>
+    <h1>TXT 2024年所有todo节目的数据可视化</h1>
+    <div id="chart" style="width: 100%; height: 600px;"></div>
 
     <!-- 引入ECharts库 -->
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
@@ -16,5 +16,75 @@
     <script src="data.js"></script>
     <!-- 引入脚本文件 -->
     <script src="script.js"></script>
+
+    <script>
+        // 初始化echarts实例
+        var chart = echarts.init(document.getElementById('chart'));
+
+        // 配置项和数据导入
+        var option = {
+            title: {
+                text: 'TXT 2024年所有todo节目的数据可视化',
+                subtext: '截止2024年7月14日',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'
+                }
+            },
+            legend: {
+                data: ['播放量', '点赞量', '评论量']
+            },
+            xAxis: {
+                type: 'category',
+                data: ['TO DO X TXT - EP.131', 'TO DO X TXT - EP.132', 'TO DO X TXT - EP.133', 'TO DO X TXT - EP.134', 'TO DO X TXT - EP.135'],
+                axisLabel: {
+                    interval: 0, // 设置X轴刻度标签全部显示
+                    rotate: 0, // 设置X轴刻度标签不旋转
+                    textStyle: {
+                        fontSize: 12 // 调整X轴刻度标签字体大小
+                    }
+                }
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            },
+            series: [
+                {
+                    name: '播放量',
+                    type: 'line',
+                    data: [320000, 280000, 300000, 350000, 400000]
+                },
+                {
+                    name: '点赞量',
+                    type: 'line',
+                    data: [25000, 23000, 26000, 28000, 30000]
+                },
+                {
+                    name: '评论量',
+                    type: 'line',
+                    data: [15000, 14000, 16000, 18000, 20000]
+                }
+            ],
+            textStyle: {
+                fontSize: 14 // 调整全局文本样式的字体大小
+            },
+            dataZoom: [
+                {
+                    type: 'slider', // 滑动条形式的缩放
+                    start: 0,
+                    end: 100
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        chart.setOption(option);
+    </script>
 </body>
 </html>
